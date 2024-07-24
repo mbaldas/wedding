@@ -6,4 +6,6 @@ export { GiftList } from './GiftList';
 export { Header } from './Header';
 export { Hero } from './Hero';
 export { RSVP } from './RSVP';
+export { Select } from './Select';
+export { SendMessage } from './SendMessage';
 export { Testimonial } from './Testimonial';

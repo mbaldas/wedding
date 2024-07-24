@@ -10,9 +10,9 @@ import {
   Header,
   Hero,
   RSVP,
+  SendMessage,
   Testimonial,
 } from '../components';
-import { SendMessage } from '@/components/SendMessage';
 
 export default function Home() {
   return (

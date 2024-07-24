@@ -7,19 +7,11 @@ import {
 } from '@heroicons/react/20/solid';
 import { Roboto_Slab } from 'next/font/google';
 import { Modal } from '../Modal';
-import clsx from 'clsx';
+import { Select } from '../Select';
 
 const roboto = Roboto_Slab({ subsets: ['latin'] });
 
 const items = [
-  {
-    name: 'Jogo de Facas Inox',
-    price: 'R$ 140,00',
-    productLink:
-      'https://www.amazon.com.br/Facas-Hamilton-Beach-Square-Suporte/dp/B0CLYS53NF/ref=sr_1_15?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3JAM3A057DOSZ&dib=eyJ2IjoiMSJ9.2SsWOZjSGQ4x3Jg-lDx7pqtOuyH4GR9F2No3c9UMMmKg9vyrWgBuwyKFpG79sqhgR2gAPeSERjW9kIuKiODPoxNCm7WHmewQ0445NsvmeMtdpskmprLOEQv4qqlR_oXqwqP6Pa_hUsPaZURkX-luEvig07uqHdalBGCmaDcWDiNE-1cXQfFwJVo3W5FoTsrIE64Y3R81s1ttabdWCmGFOhQ9r_VVbJFjaBwRPUFFFv04NIGmHj9UpT9uu96_JhCX3RbJcnuLczUvqOGdECC85VXS67w9q0hnUVgRh9GwUF4.h0JGo26HvOrON3ECePCLqJFHsIaRBW61XrddbmZaSCI&dib_tag=se&keywords=faca&qid=1721700096&sprefix=fa%2Caps%2C325&sr=8-15&ufe=app_do%3Aamzn1.fos.a492fd4a-f54d-4e8d-8c31-35e0a04ce61e',
-    imageUrl: 'jogo_faca.png',
-    creditCard: 'https://mpago.la/16jgQgV',
-  },
   {
     name: 'Roupa de Cama Queen Riachuelo',
     price: 'R$ 180,00',
@@ -45,22 +37,6 @@ const items = [
     creditCard: 'https://mpago.la/13e5EGF',
   },
   {
-    name: 'Robo Aspirador',
-    price: 'R$ 500,00',
-    productLink:
-      'https://www.amazon.com.br/Aspirador-WAP-Bivolt-Autom%C3%A1tico-Inteligente/dp/B0849PHXW1/ref=asc_df_B0849PHXW1/?tag=googleshopp00-20&linkCode=df0&hvadid=379725476635&hvpos=&hvnetw=g&hvrand=7726647202389929218&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196585&hvtargid=pla-893461771420&psc=1&mcid=83f05d9f50b837ac878c82174d14f206',
-    imageUrl: 'aspirador.png',
-    creditCard: 'https://mpago.la/132hiMX',
-  },
-  {
-    name: 'Jogo de Panelas Cerâmica',
-    price: 'R$ 650,00',
-    productLink:
-      'https://www.amazon.com.br/Conjunto-Panelas-Ceramic-Orion-Brinox/dp/B086TXYHGC/ref=sr_1_16?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=21X9NDKSLULAY&dib=eyJ2IjoiMSJ9.cBXOm9-gemZXQVo-3_JVJjB6tH_ru5DKFbXcjtN_s8xm5yjmFBTZt0wsgQcVr2As6mLXwX8Ihrqf5NYL9C92fxLz2f4jQZo_rZCoRvXhRbCdRrD8cV6cpso1I4vmvn0Bh763awWrCJGpgEwXsn0TUATXvsqqsAND-TiykJ4k-JNC_Z2xjuOs-hdM7kG56ittCftaek7fRswgHnK7JFoAVwKmIioWqPBHrD3pvW6RzIpGFxqxXL2ZChy7IoO_lHWVoAF_2mMc0uHYeyQ03l-QFs&dib_tag=se&keywords=panelas+ceramica&qid=1721699903&sprefix=panelas+ceramic%2Caps%2C200&sr=8-16&ufe=app_do%3Aamzn1.fos.360726cb-54b8-4209-b7f3-b30f3f21a9db',
-    imageUrl: 'jogo_panelas.png',
-    creditCard: 'https://mpago.la/1TUw8ZG',
-  },
-  {
     name: 'Saca Rolhas Elétrico',
     price: 'R$ 50,00',
     productLink:
@@ -68,6 +44,7 @@ const items = [
     imageUrl: 'saca_rolha.png',
     creditCard: 'https://mpago.la/2jQEdem',
   },
+
   {
     name: 'Jogo de Talheres Tramontina',
     price: 'R$ 80,00',
@@ -85,6 +62,14 @@ const items = [
     creditCard: 'https://mpago.la/1BN53Xk',
   },
   {
+    name: 'Jogo de Facas Inox',
+    price: 'R$ 140,00',
+    productLink:
+      'https://www.amazon.com.br/Facas-Hamilton-Beach-Square-Suporte/dp/B0CLYS53NF/ref=sr_1_15?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3JAM3A057DOSZ&dib=eyJ2IjoiMSJ9.2SsWOZjSGQ4x3Jg-lDx7pqtOuyH4GR9F2No3c9UMMmKg9vyrWgBuwyKFpG79sqhgR2gAPeSERjW9kIuKiODPoxNCm7WHmewQ0445NsvmeMtdpskmprLOEQv4qqlR_oXqwqP6Pa_hUsPaZURkX-luEvig07uqHdalBGCmaDcWDiNE-1cXQfFwJVo3W5FoTsrIE64Y3R81s1ttabdWCmGFOhQ9r_VVbJFjaBwRPUFFFv04NIGmHj9UpT9uu96_JhCX3RbJcnuLczUvqOGdECC85VXS67w9q0hnUVgRh9GwUF4.h0JGo26HvOrON3ECePCLqJFHsIaRBW61XrddbmZaSCI&dib_tag=se&keywords=faca&qid=1721700096&sprefix=fa%2Caps%2C325&sr=8-15&ufe=app_do%3Aamzn1.fos.a492fd4a-f54d-4e8d-8c31-35e0a04ce61e',
+    imageUrl: 'jogo_faca.png',
+    creditCard: 'https://mpago.la/16jgQgV',
+  },
+  {
     name: 'Parasailing Punta Cana',
     price: 'R$ 250,00',
     productLink:
@@ -93,92 +78,12 @@ const items = [
     creditCard: 'https://mpago.la/1gEQLKg',
   },
   {
-    name: 'Filtro de Água Everest',
-    price: 'R$ 1200,00',
-    productLink:
-      'https://www.compraeverest.com.br/everest-star--prata/p?idsku=4&gad_source=1&gclid=CjwKCAjwhvi0BhA4EiwAX25uj5moe6Mvtt9Kn_V0L-kjtWbn24XIBJ5nXhpj5z5lf0iLkvocm7fXhxoC5boQAvD_BwE',
-    imageUrl: 'filtro_everest.png',
-    creditCard: 'https://mpago.la/2jgCJ8q',
-  },
-  {
-    name: 'Máquina de Lavar',
-    price: 'R$ 2000,00',
-    productLink:
-      'https://www.magazineluiza.com.br/lavadora-de-roupas-brastemp-inverter-10kg-cesto-inox-15-programas-de-lavagem-titanium-bnf10as/p/237972400/ed/lava/?&force=4&seller_id=magazineluiza&utm_source=google&utm_medium=pla&utm_campaign=&partner_id=66993&gclsrc=aw.ds&gclid=CjwKCAjwhvi0BhA4EiwAX25uj5BFU8QTnxPtwO0ZHk7mYA1A3Il7kDwL-miXi3jkgAapRLkYzphbgRoCyfQQAvD_BwE',
-    imageUrl: 'maquina_lavar.png',
-    creditCard: 'https://mpago.la/1Vo4tiS',
-  },
-  {
-    name: 'Tábua de Carne',
-    price: 'R$ 70,00',
-    productLink:
-      'https://www.camicado.com.br/p/tabua-de-corte-home-style-cocinero/-/A-101046761-br.lc?sku=101046770&gad_source=1&gclid=CjwKCAjwhvi0BhA4EiwAX25uj0NEDiMK8gcON3wARSLvD2birOst2nYzbzkeWIfl75rRUIqTaig3NBoCnhcQAvD_BwE',
-    imageUrl: 'tabua_carne.png',
-    creditCard: 'https://mpago.la/2koYNzr',
-  },
-  {
     name: 'Panela Elétrica Para Fondue',
     price: 'R$ 170,00',
     productLink:
       'https://www.fastshop.com.br/web/p/d/OSOFND100CNZ_PRD/panela-el%C3%A9trica-para-fondue-oster---ofnd100?utm_source=google&utm_medium=cpc&utm_term=pmax_1p&utm_campaign=17557564951&gad_source=1&gclid=CjwKCAjwhvi0BhA4EiwAX25uj_hzVPy9yd6TKZO8_elIImjknju6RMAFYvolFZXP4LsLWF7pafu8aRoC0lMQAvD_BwE',
     imageUrl: 'fondue.png',
     creditCard: 'https://mpago.la/2dANeYm',
-  },
-  {
-    name: 'Jogo de Toalhas',
-    price: 'R$ 180,00',
-    productLink:
-      'https://www.firstclass.com.br/jogo-banhao-4-pecas-chronos-fio-penteado---403-off-white/p',
-    imageUrl: 'jogo_toalha.png',
-    creditCard: 'https://mpago.la/2doTFUf',
-  },
-  {
-    name: 'Edredom',
-    price: 'R$ 215,00',
-    productLink:
-      'https://www.casadona.com.br/kit-edredom-italiano-3-pecas-200-fios-100-algodao-queen-240-x-220-metros-casa-dona?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&sku=50004997&gad_source=1&gclid=CjwKCAjwhvi0BhA4EiwAX25uj-U4kbkjfbSXAp6YWliOBE8ORkKO3xwZTn90esUz8QoKGE0htwd0UBoCB4oQAvD_BwE',
-    imageUrl: 'edredom.png',
-    creditCard: 'https://mpago.la/2dX8CN3',
-  },
-  {
-    name: 'Garrafa Termica Stanley 700ml',
-    price: 'R$ 220,00',
-    productLink:
-      'https://www.amazon.com.br/Garrafa-T%C3%A9rmica-Quick-Stanley-Lagoon/dp/B098LQN2CG/ref=asc_df_B098LNQ9BX/?tag=googleshopp00-20&linkCode=df0&hvadid=456273449207&hvpos=&hvnetw=g&hvrand=8274395135097382800&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196585&hvtargid=pla-1396975989058&mcid=3b22b4f1d6003c378b7e0f0a90b4070f&th=1',
-    imageUrl: 'garrafa_stanley.png',
-    creditCard: 'https://mpago.la/2aGkZdL',
-  },
-  {
-    name: 'Caixa de Som JBL',
-    price: 'R$ 500,00',
-    productLink:
-      'https://www.amazon.com.br/Caixa-Bluetooth-JBL-Flip-Essential/dp/B0B3XX8P9C/ref=asc_df_B0B3XX8P9C/?tag=googleshopp00-20&linkCode=df0&hvadid=379751789278&hvpos=&hvnetw=g&hvrand=4030027105346820953&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196585&hvtargid=pla-1676993151769&psc=1&mcid=0f05999166243970bdc056a00671c1eb',
-    imageUrl: 'jbl.png',
-    creditCard: 'https://mpago.la/18ARvyh',
-  },
-  {
-    name: 'Assadeira',
-    price: 'R$ 60,00',
-    productLink:
-      'https://www.amazon.com.br/Tramontina-20051028-Assadeira-Revestimento-Antiaderente/dp/B008R7SPUA/ref=asc_df_B008R7SPUA/?tag=googleshopp00-20&linkCode=df0&hvadid=405655612522&hvpos=&hvnetw=g&hvrand=14554400423036211832&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvtargid=pla-439841107819&mcid=4c32bf3415b83b839f25ddd90b4acb0a&th=1',
-    imageUrl: 'assadeira.png',
-    creditCard: 'https://mpago.la/1nQ23Af',
-  },
-  {
-    name: 'Porta Copos 4 Unidades',
-    price: 'R$ 60,00',
-    productLink:
-      'https://www.camicado.com.br/p/porta-copo-home-style-bambus/-/A-300033050-br.lc?sku=000000000000033050&utm_id=18288222626&gad_source=1&gclid=CjwKCAjwhvi0BhA4EiwAX25uj-CEAajsjVXn1SrZKznOEfFlBs5k6TRcq_ImeUsWW9kXWJqbiRRc4xoCMPMQAvD_BwE',
-    imageUrl: 'porta_copo.png',
-    creditCard: 'https://mpago.la/2kCbK2e',
-  },
-  {
-    name: 'Porta Temperos',
-    price: 'R$ 70,00',
-    productLink:
-      'https://www.amazon.com.br/Porta-Temperos-Condimentos-Girat%C3%B3rio-pe%C3%A7as/dp/B0CFWPG11F/ref=asc_df_B0CFWPG11F/?tag=googleshopp00-20&linkCode=df0&hvadid=647436915040&hvpos=&hvnetw=g&hvrand=5717448772585524965&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196585&hvtargid=pla-2204411156591&psc=1&mcid=519d0d8366a63f309b3c4e726f93aa43',
-    imageUrl: 'porta_tempero.png',
-    creditCard: 'https://mpago.la/12RbHSM',
   },
   {
     name: 'Assadeira de Bolo Elétrica',
@@ -197,6 +102,86 @@ const items = [
     creditCard: 'https://mpago.la/2gg5bZz',
   },
   {
+    name: 'Caixa de Som JBL',
+    price: 'R$ 500,00',
+    productLink:
+      'https://www.amazon.com.br/Caixa-Bluetooth-JBL-Flip-Essential/dp/B0B3XX8P9C/ref=asc_df_B0B3XX8P9C/?tag=googleshopp00-20&linkCode=df0&hvadid=379751789278&hvpos=&hvnetw=g&hvrand=4030027105346820953&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196585&hvtargid=pla-1676993151769&psc=1&mcid=0f05999166243970bdc056a00671c1eb',
+    imageUrl: 'jbl.png',
+    creditCard: 'https://mpago.la/18ARvyh',
+  },
+  {
+    name: 'Filtro de Água Everest',
+    price: 'R$ 1200,00',
+    productLink:
+      'https://www.compraeverest.com.br/everest-star--prata/p?idsku=4&gad_source=1&gclid=CjwKCAjwhvi0BhA4EiwAX25uj5moe6Mvtt9Kn_V0L-kjtWbn24XIBJ5nXhpj5z5lf0iLkvocm7fXhxoC5boQAvD_BwE',
+    imageUrl: 'filtro_everest.png',
+    creditCard: 'https://mpago.la/2jgCJ8q',
+  },
+  {
+    name: 'Tábua de Carne',
+    price: 'R$ 70,00',
+    productLink:
+      'https://www.camicado.com.br/p/tabua-de-corte-home-style-cocinero/-/A-101046761-br.lc?sku=101046770&gad_source=1&gclid=CjwKCAjwhvi0BhA4EiwAX25uj0NEDiMK8gcON3wARSLvD2birOst2nYzbzkeWIfl75rRUIqTaig3NBoCnhcQAvD_BwE',
+    imageUrl: 'tabua_carne.png',
+    creditCard: 'https://mpago.la/2koYNzr',
+  },
+  {
+    name: 'Edredom',
+    price: 'R$ 215,00',
+    productLink:
+      'https://www.casadona.com.br/kit-edredom-italiano-3-pecas-200-fios-100-algodao-queen-240-x-220-metros-casa-dona?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&sku=50004997&gad_source=1&gclid=CjwKCAjwhvi0BhA4EiwAX25uj-U4kbkjfbSXAp6YWliOBE8ORkKO3xwZTn90esUz8QoKGE0htwd0UBoCB4oQAvD_BwE',
+    imageUrl: 'edredom.png',
+    creditCard: 'https://mpago.la/2dX8CN3',
+  },
+  {
+    name: 'Garrafa Termica Stanley 700ml',
+    price: 'R$ 220,00',
+    productLink:
+      'https://www.amazon.com.br/Garrafa-T%C3%A9rmica-Quick-Stanley-Lagoon/dp/B098LQN2CG/ref=asc_df_B098LNQ9BX/?tag=googleshopp00-20&linkCode=df0&hvadid=456273449207&hvpos=&hvnetw=g&hvrand=8274395135097382800&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196585&hvtargid=pla-1396975989058&mcid=3b22b4f1d6003c378b7e0f0a90b4070f&th=1',
+    imageUrl: 'garrafa_stanley.png',
+    creditCard: 'https://mpago.la/2aGkZdL',
+  },
+  {
+    name: 'Robo Aspirador',
+    price: 'R$ 500,00',
+    productLink:
+      'https://www.amazon.com.br/Aspirador-WAP-Bivolt-Autom%C3%A1tico-Inteligente/dp/B0849PHXW1/ref=asc_df_B0849PHXW1/?tag=googleshopp00-20&linkCode=df0&hvadid=379725476635&hvpos=&hvnetw=g&hvrand=7726647202389929218&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196585&hvtargid=pla-893461771420&psc=1&mcid=83f05d9f50b837ac878c82174d14f206',
+    imageUrl: 'aspirador.png',
+    creditCard: 'https://mpago.la/132hiMX',
+  },
+  {
+    name: 'Porta Temperos',
+    price: 'R$ 70,00',
+    productLink:
+      'https://www.amazon.com.br/Porta-Temperos-Condimentos-Girat%C3%B3rio-pe%C3%A7as/dp/B0CFWPG11F/ref=asc_df_B0CFWPG11F/?tag=googleshopp00-20&linkCode=df0&hvadid=647436915040&hvpos=&hvnetw=g&hvrand=5717448772585524965&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196585&hvtargid=pla-2204411156591&psc=1&mcid=519d0d8366a63f309b3c4e726f93aa43',
+    imageUrl: 'porta_tempero.png',
+    creditCard: 'https://mpago.la/12RbHSM',
+  },
+  {
+    name: 'Jogo de Toalhas',
+    price: 'R$ 180,00',
+    productLink:
+      'https://www.firstclass.com.br/jogo-banhao-4-pecas-chronos-fio-penteado---403-off-white/p',
+    imageUrl: 'jogo_toalha.png',
+    creditCard: 'https://mpago.la/2doTFUf',
+  },
+  {
+    name: 'Máquina de Lavar',
+    price: 'R$ 2000,00',
+    productLink:
+      'https://www.magazineluiza.com.br/lavadora-de-roupas-brastemp-inverter-10kg-cesto-inox-15-programas-de-lavagem-titanium-bnf10as/p/237972400/ed/lava/?&force=4&seller_id=magazineluiza&utm_source=google&utm_medium=pla&utm_campaign=&partner_id=66993&gclsrc=aw.ds&gclid=CjwKCAjwhvi0BhA4EiwAX25uj5BFU8QTnxPtwO0ZHk7mYA1A3Il7kDwL-miXi3jkgAapRLkYzphbgRoCyfQQAvD_BwE',
+    imageUrl: 'maquina_lavar.png',
+    creditCard: 'https://mpago.la/1Vo4tiS',
+  },
+  {
+    name: 'Porta Copos 4 Unidades',
+    price: 'R$ 60,00',
+    productLink:
+      'https://www.camicado.com.br/p/porta-copo-home-style-bambus/-/A-300033050-br.lc?sku=000000000000033050&utm_id=18288222626&gad_source=1&gclid=CjwKCAjwhvi0BhA4EiwAX25uj-CEAajsjVXn1SrZKznOEfFlBs5k6TRcq_ImeUsWW9kXWJqbiRRc4xoCMPMQAvD_BwE',
+    imageUrl: 'porta_copo.png',
+    creditCard: 'https://mpago.la/2kCbK2e',
+  },
+  {
     name: 'Geladeira',
     price: 'R$ 5000,00',
     productLink:
@@ -204,18 +189,56 @@ const items = [
     imageUrl: 'geladeira.png',
     creditCard: 'https://mpago.la/2oxLx6V',
   },
+  {
+    name: 'Assadeira',
+    price: 'R$ 60,00',
+    productLink:
+      'https://www.amazon.com.br/Tramontina-20051028-Assadeira-Revestimento-Antiaderente/dp/B008R7SPUA/ref=asc_df_B008R7SPUA/?tag=googleshopp00-20&linkCode=df0&hvadid=405655612522&hvpos=&hvnetw=g&hvrand=14554400423036211832&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvtargid=pla-439841107819&mcid=4c32bf3415b83b839f25ddd90b4acb0a&th=1',
+    imageUrl: 'assadeira.png',
+    creditCard: 'https://mpago.la/1nQ23Af',
+  },
+  {
+    name: 'Jogo de Panelas Cerâmica',
+    price: 'R$ 650,00',
+    productLink:
+      'https://www.amazon.com.br/Conjunto-Panelas-Ceramic-Orion-Brinox/dp/B086TXYHGC/ref=sr_1_16?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=21X9NDKSLULAY&dib=eyJ2IjoiMSJ9.cBXOm9-gemZXQVo-3_JVJjB6tH_ru5DKFbXcjtN_s8xm5yjmFBTZt0wsgQcVr2As6mLXwX8Ihrqf5NYL9C92fxLz2f4jQZo_rZCoRvXhRbCdRrD8cV6cpso1I4vmvn0Bh763awWrCJGpgEwXsn0TUATXvsqqsAND-TiykJ4k-JNC_Z2xjuOs-hdM7kG56ittCftaek7fRswgHnK7JFoAVwKmIioWqPBHrD3pvW6RzIpGFxqxXL2ZChy7IoO_lHWVoAF_2mMc0uHYeyQ03l-QFs&dib_tag=se&keywords=panelas+ceramica&qid=1721699903&sprefix=panelas+ceramic%2Caps%2C200&sr=8-16&ufe=app_do%3Aamzn1.fos.360726cb-54b8-4209-b7f3-b30f3f21a9db',
+    imageUrl: 'jogo_panelas.png',
+    creditCard: 'https://mpago.la/1TUw8ZG',
+  },
 ];
 
 export default function GiftList() {
   const [currentPage, setCurrentPage] = useState(1);
   const [showModal, setShowModal] = useState(false);
+  const [selectedFilter, setSelectedFilter] = useState(null);
   const itemsPerPage = 6;
+
+  const handleFilterChange = (filterId) => {
+    setSelectedFilter(filterId);
+  };
+
+  const parsePrice = (price) => {
+    return parseFloat(price.replace('R$ ', '').replace(',', '.'));
+  };
+
+  const filteredItems = items.sort((a, b) => {
+    if (selectedFilter === 'lowPrice') {
+      return parsePrice(a.price) - parsePrice(b.price);
+    }
+    if (selectedFilter === 'highPrice') {
+      return parsePrice(b.price) - parsePrice(a.price);
+    }
+    if (selectedFilter === 'aToZ') {
+      return a.name.localeCompare(b.name);
+    }
+    return 0;
+  });
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = filteredItems.slice(indexOfFirstItem, indexOfLastItem);
 
-  const totalPages = Math.ceil(items.length / itemsPerPage);
+  const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
 
   const handlePrevPage = () => {
     if (currentPage > 1) {
@@ -245,9 +268,12 @@ export default function GiftList() {
           <p className='mt-2 text-base font-medium text-gray-800'>
             Avenida Rui Barbosa 538, Apto 306, São Francisco
           </p>
-          <span className='mt-2 block text-sm italic text-gray-600'></span>
         </div>
         <div className='lg:w-2/3 mx-auto block'>
+          <Select
+            selectedFilter={selectedFilter}
+            onChange={handleFilterChange}
+          />
           <ul
             role='list'
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
@@ -311,21 +337,21 @@ export default function GiftList() {
                   }`}
                 >
                   <ArrowLongLeftIcon
+                    className='mr-3 h-5 w-5 text-gray-400'
                     aria-hidden='true'
-                    className='mr-3 h-5 w-5'
                   />
                   Anterior
                 </button>
               </div>
               <div className='hidden md:-mt-px md:flex'>
-                {Array.from({ length: totalPages }, (_, index) => (
+                {Array.from({ length: totalPages }).map((_, index) => (
                   <button
-                    key={index}
+                    key={index + 1}
                     onClick={() => setCurrentPage(index + 1)}
                     className={`inline-flex items-center border-t-2 px-4 pt-4 text-sm font-medium ${
                       currentPage === index + 1
-                        ? 'border-gray-700 text-gray-800'
-                        : 'border-transparent text-gray-500 hover:border-gray-200 hover:text-gray-900'
+                        ? 'border-gray-800 text-gray-800'
+                        : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
                     }`}
                   >
                     {index + 1}
@@ -342,10 +368,10 @@ export default function GiftList() {
                       : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
                   }`}
                 >
-                  Próxima
+                  Próximo
                   <ArrowLongRightIcon
+                    className='ml-3 h-5 w-5 text-gray-400'
                     aria-hidden='true'
-                    className='ml-3 h-5 w-5'
                   />
                 </button>
               </div>
@@ -353,9 +379,6 @@ export default function GiftList() {
           )}
         </div>
       </div>
-      {showModal && (
-        <Modal open={showModal} onClose={() => setShowModal(false)} />
-      )}
     </div>
   );
 }
