@@ -3,9 +3,17 @@ import { useState, useEffect } from 'react';
 export default function Testimonial() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [
-    '/borrada.jpg',
-    '/fusca.jpg', // Add more images here as needed
     '/jornal.jpg',
+    '/fusca.jpg',
+    '/borrada.jpg',
+    '/carousel_3.jpg',
+    '/carousel_7.jpg',
+    '/carousel_5.jpg',
+    '/carousel_4.jpg',
+    '/carousel_6.jpg',
+    '/carousel_1.jpg',
+    '/carousel_8.jpg',
+    '/carousel_2.jpg',
   ];
 
   useEffect(() => {
@@ -13,7 +21,7 @@ export default function Testimonial() {
       setCurrentIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000); // Adjust the interval (in milliseconds) as needed
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
@@ -39,7 +47,7 @@ export default function Testimonial() {
             </div>
           </div>
           <div className='w-full max-w-2xl xl:max-w-none xl:flex-auto xl:p-16'>
-            <figure className='relative isolate pt-6 sm:pt-12'>
+            <figure className='relative isolate pt-6 lg:pt-0 sm:pt-12'>
               <svg
                 fill='none'
                 viewBox='0 0 162 128'
@@ -55,17 +63,28 @@ export default function Testimonial() {
               <p className='text-2xl font-semibold leading-8 text-white'>
                 Nossa História
               </p>
-              <blockquote className='text-sm mt-8 font-semibold leading-8 text-white sm:text-base sm:leading-9'>
+              <blockquote className='text-sm h-48 overflow-y-auto mt-8 font-semibold leading-4 text-white sm:text-base sm:leading-6'>
                 <p>
-                  Gravida quam mi erat tortor neque molestie. Auctor aliquet at
-                  porttitor a enim nunc suscipit tincidunt nunc. Et non lorem
-                  tortor posuere. Nunc eu scelerisque interdum eget tellus non
-                  nibh scelerisque bibendum.
+                  Nos conhecemos em 2020 online e, devido a pandemia, só nos
+                  vimos em março do ano seguinte. Cultivamos uma amizade de mais
+                  de 1 ano até o pedido de namoro acontecer dia 12/09/2021.
+                  Apesar da demora para começar o namoro tudo que veio após foi
+                  sem muita espera. Com 7 meses estávamos morando juntos, com 1
+                  ano e 6 meses noivos (ps: com um pedido improvisado em cima de
+                  uma pedra em Florianópolis) e uma semana após completarmos 3
+                  anos de relacionamento, estaremos finalmente casados.
+                  <br /> <br /> Durante esses 3 anos muita coisa mudou. Mudamos
+                  de casa algumas vezes, de emprego, cabelo, hobbies, rotinas,
+                  restaurantes favoritos…mas em cada mudança, o inalterado era a
+                  certeza que temos um sobre o outro. <br /> <br />
+                  Você que está lendo isso teve uma participação especial nesses
+                  anos e não poderíamos estar mais felizes de poder celebrar o
+                  nosso amor com quem a gente ama. Então, até lá!
                 </p>
               </blockquote>
               <figcaption className='mt-8'>
                 <div className='font-semibold text-2xl text-white'>
-                  Por nós,
+                  Com carinho,
                 </div>
                 <div className='mt-1 text-gray-400 text-base'>
                   Adriele e Matheus

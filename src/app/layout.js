@@ -1,7 +1,9 @@
 import { Cinzel } from 'next/font/google';
 import './globals.css';
 
-const cinzel = Cinzel({ subsets: ['latin'] });
+const cinzel = Cinzel({
+  subsets: ['latin'],
+});
 
 export const metadata = {
   title: 'Adriele & Matheus',

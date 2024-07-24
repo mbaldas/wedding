@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { Inter } from 'next/font/google';
+import { Roboto_Slab } from 'next/font/google';
 import { sendMessage } from '../../../action';
 
-const inter = Inter({ subsets: ['latin'] });
+const roboto = Roboto_Slab({ subsets: ['latin'] });
 
 export default function SendMessage() {
   const [name, setName] = useState('');
@@ -23,7 +23,7 @@ export default function SendMessage() {
 
   return (
     <div
-      className={`font-inter mb-24 border border-gray-200 px-4 sm:p-6 lg:p-8 bg-white rounded ${inter.className}`}
+      className={`mb-12 lg:mb-24 lg:border lg:border-gray-200 px-4 sm:p-6 lg:p-8 bg-white rounded ${roboto.className}`}
     >
       <form onSubmit={handleSubmit} className='space-y-6'>
         <div className='flex items-center space-x-4'>
@@ -62,7 +62,7 @@ export default function SendMessage() {
               onChange={(e) => setMessage(e.target.value)}
               required
               rows='4'
-              placeholder='Digite aqui sua mensagem de amor pra nós'
+              placeholder='Digite aqui uma mensagem de amor para nós'
               className='block w-full text-sm p-2 text-gray-700 bg-gray-200 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500 placeholder:tracking-wider'
             ></textarea>
           </div>

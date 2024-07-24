@@ -29,17 +29,20 @@ export default function Home() {
         </section>
 
         <p className='text-center max-w-80 mt-8 text-black text-xs md:text-base'>
-          Se junte a nós enquanto embarcamos em uma jornada de amor, alegria e
-          eterna felicidade
+          Se junte a nós enquanto embarcamos em uma jornada de amor, paixão e
+          felicidade eterna
         </p>
 
-        <section className='relative mt-24 w-full h-[50vh] flex items-center justify-center bg-gray-900'>
+        <section
+          id='cerimony'
+          className='relative mt-12 lg:mt-24 w-full h-[50vh] flex items-center justify-center bg-gray-900'
+        >
           <Container>
             <Countdown />
           </Container>
         </section>
 
-        <section id='cerimony' className='mt-24 scroll-mt-16'>
+        <section className='mt-12 lg:mt-24'>
           <Container>
             <DescriptionList />
           </Container>
@@ -47,7 +50,7 @@ export default function Home() {
 
         <section
           id='rsvp'
-          className='relative mt-24 w-full h-[700px] flex items-center justify-center bg-gray-900'
+          className='relative mt-12 lg:mt-24 w-full h-[700px] flex items-center justify-center bg-gray-900'
         >
           <h3 className='text-4xl pl-[15%] md:pl-0 md:text-6xl tracking-[0.3em] font-normal uppercase absolute text-white/80 z-20 top-2 md:top-4'>
             confirme sua presença
@@ -59,7 +62,7 @@ export default function Home() {
 
         <section
           id='gift-list'
-          className='scroll-mt-16 w-full mt-24 flex flex-col items-center'
+          className='scroll-mt-16 w-full mt-12 lg:mt-24 flex flex-col items-center'
         >
           <Container>
             <GiftList />
@@ -77,7 +80,7 @@ export default function Home() {
             Mural de Recados
           </h3>
           <p className='text-xs text-center text-gray-500 mb-4'>
-            Nós vamos adorar ler!
+            Deixe seu recado, nós vamos adorar ler!
           </p>
           <Container>
             <SendMessage />
