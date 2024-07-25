@@ -1,13 +1,6 @@
 'use client';
 
-import { useState } from 'react';
-import {
-  Listbox,
-  ListboxButton,
-  ListboxOption,
-  ListboxOptions,
-  Transition,
-} from '@headlessui/react';
+import { Listbox } from '@headlessui/react';
 import { ChevronUpDownIcon } from '@heroicons/react/20/solid';
 
 const filters = [
@@ -17,22 +10,16 @@ const filters = [
 ];
 
 export default function Select({ selectedFilter, onChange }) {
-  const [isOpen, setIsOpen] = useState(false);
-
   const handleFilterChange = (filterId) => {
     onChange(filterId === selectedFilter ? null : filterId);
-    setIsOpen(false); // Close the listbox after selection
   };
 
   return (
     <div className='relative mb-4 flex lg:justify-end'>
-      <Listbox as='div' value={selectedFilter} onChange={onChange}>
+      <Listbox as='div' value={selectedFilter} onChange={handleFilterChange}>
         {({ open }) => (
           <>
-            <ListboxButton
-              className='relative w-full lg:w-80 cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-800 sm:text-sm sm:leading-6'
-              onClick={() => setIsOpen(!isOpen)}
-            >
+            <Listbox.Button className='relative w-full lg:w-80 cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-800 sm:text-sm sm:leading-6'>
               <span className='block truncate'>
                 {selectedFilter
                   ? filters.find((filter) => filter.id === selectedFilter).name
@@ -44,24 +31,12 @@ export default function Select({ selectedFilter, onChange }) {
                   className='h-5 w-5 text-gray-400'
                 />
               </span>
-            </ListboxButton>
+            </Listbox.Button>
 
-            <Transition
-              show={open}
-              as='div'
-              enter='transition ease-out duration-100'
-              enterFrom='transform opacity-0 scale-95'
-              enterTo='transform opacity-100 scale-100'
-              leave='transition ease-in duration-75'
-              leaveFrom='transform opacity-100 scale-100'
-              leaveTo='transform opacity-0 scale-95'
-            >
-              <ListboxOptions
-                static
-                className='absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'
-              >
+            {open && (
+              <Listbox.Options className='absolute z-40 mt-1 w-full lg:w-80 overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'>
                 {filters.map((filter) => (
-                  <ListboxOption
+                  <Listbox.Option
                     key={filter.id}
                     value={filter.id}
                     className={({ active }) =>
@@ -87,10 +62,10 @@ export default function Select({ selectedFilter, onChange }) {
                         </span>
                       </label>
                     )}
-                  </ListboxOption>
+                  </Listbox.Option>
                 ))}
-              </ListboxOptions>
-            </Transition>
+              </Listbox.Options>
+            )}
           </>
         )}
       </Listbox>

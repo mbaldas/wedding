@@ -177,7 +177,7 @@ const items = [
     name: 'Porta Copos 4 Unidades',
     price: 'R$ 60,00',
     productLink:
-      'https://www.camicado.com.br/p/porta-copo-home-style-bambus/-/A-300033050-br.lc?sku=000000000000033050&utm_id=18288222626&gad_source=1&gclid=CjwKCAjwhvi0BhA4EiwAX25uj-CEAajsjVXn1SrZKznOEfFlBs5k6TRcq_ImeUsWW9kXWJqbiRRc4xoCMPMQAvD_BwE',
+      'https://lojamomo.com.br/products/drycup%C2%AE-porta-copos-momo-lifestyle?variant=43577997099238&currency=BRL&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gad_source=1&gclid=CjwKCAjwqf20BhBwEiwAt7dtdWLDVRumFiAoCiKdXdKMnReQqzZ3F04dBpMsF4kSRcZucwhIIRxuPxoC8k0QAvD_BwE',
     imageUrl: 'porta_copo.png',
     creditCard: 'https://mpago.la/2kCbK2e',
   },
@@ -379,6 +379,9 @@ export default function GiftList() {
           )}
         </div>
       </div>
+      {showModal && (
+        <Modal open={showModal} onClose={() => setShowModal(false)} />
+      )}
     </div>
   );
 }
