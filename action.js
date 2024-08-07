@@ -33,3 +33,18 @@ export const sendMessage = async (person, message) => {
     html: emailContent,
   });
 };
+
+export const sendGift = async (person, gift) => {
+  const emailContent = `
+    <p>${person} comprou o seguinte presente: ${gift}</p>
+  `;
+
+  const resend = new Resend('re_4i3VZW1A_364RoEFTuCgYzaNkT4Rj7AP2');
+
+  await resend.emails.send({
+    from: 'onboarding@resend.dev',
+    to: 'matheusbaldas@hotmail.com',
+    subject: 'RSVP - Wedding Gift',
+    html: emailContent,
+  });
+};

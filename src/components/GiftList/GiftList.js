@@ -6,8 +6,9 @@ import {
   CreditCardIcon,
 } from '@heroicons/react/20/solid';
 import { Roboto_Slab } from 'next/font/google';
-import { Modal } from '../Modal';
+import { ModalPix } from '../ModalPix';
 import { Select } from '../Select';
+import { ModalCard } from '../ModalCard';
 
 const roboto = Roboto_Slab({ subsets: ['latin'] });
 
@@ -209,8 +210,10 @@ const items = [
 
 export default function GiftList() {
   const [currentPage, setCurrentPage] = useState(1);
-  const [showModal, setShowModal] = useState(false);
+  const [showPixModal, setShowPixModal] = useState(false);
+  const [showCardModal, setShowCardModal] = useState(false);
   const [selectedFilter, setSelectedFilter] = useState(null);
+  const [selectedGift, setSelectedGift] = useState(null);
   const itemsPerPage = 6;
 
   const handleFilterChange = (filterId) => {
@@ -302,7 +305,7 @@ export default function GiftList() {
                 <div className='flex divide-x divide-gray-200'>
                   <button
                     className='relative flex-1 inline-flex items-center justify-center gap-x-3 border border-transparent py-2 text-sm transition-colors duration-300 font-semibold text-gray-800 rounded-bl-lg hover:bg-gray-200'
-                    onClick={() => setShowModal(true)}
+                    onClick={() => setShowPixModal(true)}
                   >
                     <QrCodeIcon
                       aria-hidden='true'
@@ -310,8 +313,11 @@ export default function GiftList() {
                     />
                     Pix
                   </button>
-                  <a
-                    href={item.creditCard}
+                  <button
+                    onClick={() => {
+                      setShowCardModal(true);
+                      setSelectedGift(item);
+                    }}
                     className='relative flex-1 inline-flex items-center justify-center gap-x-3 py-2 text-sm font-semibold transition-colors duration-300 text-gray-800 rounded-br-lg hover:bg-gray-200'
                   >
                     <CreditCardIcon
@@ -319,7 +325,7 @@ export default function GiftList() {
                       className='h-5 w-5 text-gray-500'
                     />
                     Cartão
-                  </a>
+                  </button>
                 </div>
               </li>
             ))}
@@ -379,8 +385,16 @@ export default function GiftList() {
           )}
         </div>
       </div>
-      {showModal && (
-        <Modal open={showModal} onClose={() => setShowModal(false)} />
+      {showPixModal && (
+        <ModalPix open={showPixModal} onClose={() => setShowPixModal(false)} />
+      )}
+      {showCardModal && (
+        <ModalCard
+          open={showCardModal}
+          onClose={() => setShowCardModal(false)}
+          link={selectedGift.productLink}
+          gift={selectedGift.name}
+        />
       )}
     </div>
   );

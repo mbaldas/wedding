@@ -14,10 +14,18 @@ export default function SendMessage() {
       await sendMessage(name, message);
       setName('');
       setMessage('');
-      alert('Email sent successfully!');
+      alert(
+        'Sua mensagem foi enviada com sucesso, mal podemos esperar pra ler!'
+      );
     } catch (error) {
-      console.error('Failed to send email:', error);
-      alert('Failed to send email: ' + (error.message || 'Unknown error'));
+      console.error(
+        'Falha no envio da mensagem, tente enviar novamente :)',
+        error
+      );
+      alert(
+        'Falha no envio da mensagem, tente enviar novamente :)' +
+          (error.message || 'Unknown error')
+      );
     }
   };
 

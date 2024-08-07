@@ -149,10 +149,12 @@ export default function RSVP() {
   const handleSubmit = async () => {
     try {
       await sendEmail(selectedPeople);
-      alert('Email sent successfully!');
+      alert('Recebemos a sua confirmação, muito obrigado!');
     } catch (error) {
       console.error(error);
-      alert('Failed to send email');
+      alert(
+        'Falha ao enviar confirmacao: ' + (error.message || 'Erro desconhecido')
+      );
     }
   };
 

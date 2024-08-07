@@ -1,7 +1,7 @@
 import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react';
 import Image from 'next/image';
 
-export default function Modal({ open, onClose }) {
+export default function ModalPix({ open, onClose }) {
   return (
     <Dialog open={open} onClose={onClose} className='relative z-10'>
       <DialogBackdrop
