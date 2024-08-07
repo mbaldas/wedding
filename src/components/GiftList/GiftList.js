@@ -272,14 +272,14 @@ export default function GiftList() {
             Avenida Rui Barbosa 538, Apto 306, São Francisco
           </p>
         </div>
-        <div className='lg:w-2/3 mx-auto block'>
+        <div className='lg:w-2/3 lg:mx-auto lg:block'>
           <Select
             selectedFilter={selectedFilter}
             onChange={handleFilterChange}
           />
           <ul
             role='list'
-            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
+            className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6'
           >
             {currentItems.map((item, index) => (
               <li

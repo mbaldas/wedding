@@ -5,7 +5,7 @@ export default function Hero() {
         <img
           src='/hero_2.jpg'
           alt='Photo of me and Adriele looking at the camera on CCBB'
-          className='w-[80px] md:w-[150px] lg:w-[300px] h-auto'
+          className='w-[120px] md:w-[150px] lg:w-[300px] h-auto'
           width={300}
           height={400}
         />
@@ -14,7 +14,7 @@ export default function Hero() {
         <img
           src='/hero_1_cropped.jpg'
           alt='Our outfit details'
-          className='w-[100px] md:w-[200px] lg:w-[400px] h-auto'
+          className='w-[150px] md:w-[200px] lg:w-[400px] h-auto'
           width={400}
           height={500}
         />
@@ -23,7 +23,7 @@ export default function Hero() {
         <img
           src='/hero_3.jpg'
           alt='Me and Adriele dancing'
-          className='w-[80px] md:w-[150px] lg:w-[300px] h-auto'
+          className='w-[120px] md:w-[150px] lg:w-[300px] h-auto'
           width={300}
           height={400}
         />
