@@ -7,12 +7,8 @@ export default function Testimonial() {
     '/fusca.jpg',
     '/borrada.jpg',
     '/carousel_3.jpg',
-    '/carousel_7.jpg',
     '/carousel_5.jpg',
-    '/carousel_4.jpg',
-    '/carousel_6.jpg',
     '/carousel_1.jpg',
-    '/carousel_8.jpg',
     '/carousel_2.jpg',
   ];
 
@@ -21,7 +17,7 @@ export default function Testimonial() {
       setCurrentIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000);
+    }, 1500);
 
     return () => clearInterval(interval);
   }, []);
