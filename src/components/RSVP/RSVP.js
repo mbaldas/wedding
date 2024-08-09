@@ -108,10 +108,10 @@ const people = [
   { id: 101, name: 'Arnaldo Leite', related: [100, 1, 2] },
   { id: 102, name: 'Bruna', related: [] },
   { id: 103, name: 'Wislley Costa', related: [104] },
-  { id: 104, name: 'Namorado Wislley Costa', related: [103] },
-  { id: 105, name: 'Lara', related: [] },
-  { id: 106, name: 'Washington', related: [107] },
-  { id: 107, name: 'Iguitto', related: [106] },
+  { id: 104, name: 'JJ Seguir', related: [103] },
+  { id: 105, name: 'Lara Bearzi', related: [] },
+  { id: 106, name: 'Washington Silva', related: [107] },
+  { id: 107, name: 'Igor Silva', related: [106] },
   { id: 109, name: 'Thayna Lira', related: [] },
 ];
 
