@@ -13,7 +13,7 @@ export const sendEmail = async (selectedPeople) => {
 
   await resend.emails.send({
     from: 'onboarding@resend.dev',
-    to: 'adrielematoso@outlook.com',
+    to: 'matheusbaldas@hotmail.com',
     subject: 'RSVP - Wedding Confirmation',
     html: emailContent,
   });
@@ -28,7 +28,7 @@ export const sendMessage = async (person, message) => {
 
   await resend.emails.send({
     from: 'onboarding@resend.dev',
-    to: 'adrielematoso@outlook.com',
+    to: 'matheusbaldas@hotmail.com',
     subject: 'RSVP - Wedding Message',
     html: emailContent,
   });
@@ -43,7 +43,7 @@ export const sendGift = async (person, gift) => {
 
   await resend.emails.send({
     from: 'onboarding@resend.dev',
-    to: 'adrielematoso@outlook.com',
+    to: 'matheusbaldas@hotmail.com',
     subject: 'RSVP - Wedding Gift',
     html: emailContent,
   });

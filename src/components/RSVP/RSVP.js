@@ -15,7 +15,7 @@ const people = [
   { id: 8, name: 'Aila Leite', related: [7, 9] },
   { id: 9, name: 'Anderson Leite', related: [7, 8] },
   { id: 10, name: 'Edilson Tavares', related: [11, 12, 13] },
-  { id: 11, name: 'Esposa Edilson', related: [10, 12, 13] },
+  { id: 11, name: 'Elvira', related: [10, 12, 13] },
   { id: 12, name: 'Giuliana Moreira', related: [10, 13, 11] },
   { id: 13, name: 'Sidwanderson Camargo', related: [10, 12, 11] },
   { id: 14, name: 'Joubert Delduque', related: [15, 16, 17] },
