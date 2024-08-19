@@ -38,15 +38,6 @@ const items = [
     creditCard: 'https://mpago.la/13e5EGF',
   },
   {
-    name: 'Saca Rolhas Elétrico',
-    price: 'R$ 50,00',
-    productLink:
-      'https://www.amazon.com.br/ABRIDOR-EL%C3%89TRICO-ACESS%C3%93RIOS-ROLHAS-DECANTER/dp/B0BQH4KC3N/ref=asc_df_B0BQH4KC3N/?tag=googleshopp00-20&linkCode=df0&hvadid=379805758976&hvpos=&hvnetw=g&hvrand=5630501282540846150&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196585&hvtargid=pla-1943716136862&psc=1&mcid=0a7ae77eaf193edcb072951d29252862',
-    imageUrl: 'saca_rolha.png',
-    creditCard: 'https://mpago.la/2jQEdem',
-  },
-
-  {
     name: 'Jogo de Talheres Tramontina',
     price: 'R$ 80,00',
     productLink:
