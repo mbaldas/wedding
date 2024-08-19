@@ -17,7 +17,7 @@ const items = [
     name: 'Roupa de Cama Queen Riachuelo',
     price: 'R$ 180,00',
     productLink:
-      'https://www.riachuelo.com.br/jogo-de-cama-queen-4-pecas-pipping-branco-casa-riachuelo-15064476001_sku?sku=15091341001&gad_source=1&gclid=CjwKCAjwhvi0BhA4EiwAX25uj-o_vLn9ipoSrKBfQmllfJtsiJaK18h5lCir7ORBv4yq41VlXfdhpRoCz2oQAvD_BwE',
+      'https://www.altenburg.com.br/jogo-de-cama-queen-4-pecas-altenburg-toque-acetinado-branco/p?idsku=240&gad_source=1&gclid=Cj0KCQjw2ou2BhCCARIsANAwM2F86y1r4w3fwXNpQB9lbctOMXSCUeTE2RM4jk6DSd83hlRCwwLXFyYaAhrXEALw_wcB',
     imageUrl: 'jogo_cama.png',
     creditCard: 'https://mpago.la/2hHkNak',
   },
