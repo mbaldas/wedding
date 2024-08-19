@@ -383,7 +383,7 @@ export default function GiftList() {
         <ModalCard
           open={showCardModal}
           onClose={() => setShowCardModal(false)}
-          link={selectedGift.productLink}
+          link={selectedGift.creditCard}
           gift={selectedGift.name}
         />
       )}
