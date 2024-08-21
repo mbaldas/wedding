@@ -14,10 +14,10 @@ const roboto = Roboto_Slab({ subsets: ['latin'] });
 
 const items = [
   {
-    name: 'Roupa de Cama Queen Riachuelo',
+    name: 'Roupa de Cama Queen',
     price: 'R$ 180,00',
     productLink:
-      'https://www.altenburg.com.br/jogo-de-cama-queen-4-pecas-altenburg-toque-acetinado-branco/p?idsku=240&gad_source=1&gclid=Cj0KCQjw2ou2BhCCARIsANAwM2F86y1r4w3fwXNpQB9lbctOMXSCUeTE2RM4jk6DSd83hlRCwwLXFyYaAhrXEALw_wcB',
+      'https://www.firstclass.com.br/jogo-de-cama--casual-blanc-queen---0001-branco/p?idsku=5007&gad_source=1&gclid=CjwKCAjw_ZC2BhAQEiwAXSgClp13iljjP6kyaygHgu9Qz3R5EjIO4VUWxfKxSJlKOcgDMdXf_fIH5BoChJYQAvD_BwE',
     imageUrl: 'jogo_cama.png',
     creditCard: 'https://mpago.la/2hHkNak',
   },
@@ -53,6 +53,15 @@ const items = [
     imageUrl: 'conjunto_copos.png',
     creditCard: 'https://mpago.la/1BN53Xk',
   },
+  {
+    name: 'Tábua Mágica',
+    price: 'R$ 50,00',
+    productLink:
+      'https://www.amazon.com.br/Tabua-M%C3%A1gica-Descongelar-Alimentos-Cozinha/dp/B082BG2RYW/ref=asc_df_B082BG2RYW/?tag=googleshopp00-20&linkCode=df0&hvadid=379805758976&hvpos=&hvnetw=g&hvrand=18106954026493973684&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196585&hvtargid=pla-880414054014&psc=1&mcid=1368c813aa293b6bad28dcab1edc6bec',
+    imageUrl: 'tabua_magica.png',
+    creditCard: 'https://mpago.la/2jQEdem',
+  },
+
   {
     name: 'Jogo de Facas Inox',
     price: 'R$ 140,00',
@@ -113,7 +122,7 @@ const items = [
     name: 'Tábua de Carne',
     price: 'R$ 70,00',
     productLink:
-      'https://www.camicado.com.br/p/tabua-de-corte-home-style-cocinero/-/A-101046761-br.lc?sku=101046770&gad_source=1&gclid=CjwKCAjwhvi0BhA4EiwAX25uj0NEDiMK8gcON3wARSLvD2birOst2nYzbzkeWIfl75rRUIqTaig3NBoCnhcQAvD_BwE',
+      'https://now.westwing.com.br/tabua-typhoon-efeito-ardosia-67784.html?simple=DEQ23TYP60202-86699&gad_source=1&gclid=CjwKCAjw_ZC2BhAQEiwAXSgCltofZAUqqIMCGlBX_866QRrfcS3pr7_yOZWkUDImKZDZg3QRLbdhsxoCB1kQAvD_BwE',
     imageUrl: 'tabua_carne.png',
     creditCard: 'https://mpago.la/2koYNzr',
   },
@@ -129,16 +138,16 @@ const items = [
     name: 'Garrafa Termica Stanley 700ml',
     price: 'R$ 220,00',
     productLink:
-      'https://www.amazon.com.br/Garrafa-T%C3%A9rmica-Quick-Stanley-Lagoon/dp/B098LQN2CG/ref=asc_df_B098LNQ9BX/?tag=googleshopp00-20&linkCode=df0&hvadid=456273449207&hvpos=&hvnetw=g&hvrand=8274395135097382800&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196585&hvtargid=pla-1396975989058&mcid=3b22b4f1d6003c378b7e0f0a90b4070f&th=1',
+      'https://www.amazon.com.br/Garrafa-T%C3%A9rmica-Classic-0-95L/dp/B09541H43Z/ref=sr_1_3?crid=32VJ4J6I4GCVG&dib=eyJ2IjoiMSJ9.FldmZFM_kGwFvc8OXmp_i7jz5ngFLzrZp0B2BV4rHGQ0rMYGsSa-l9uXtcHbIs5h3T4m553qiP06qq3ebxiARhdYc3LUq4BDhPFt7wDbfivZ59qtXqPG3Ys36uwEqhjPnbytrBriv0WClKUyEC4iqtOKIC0PYtrNFx9RK0NW0npnei-jvGlHJNUi5FfV53TdqVLKHPmZe9msY9q36yx-brziPAVna1qZ9s7UxRtjhXg.Y9IZRUczktHHwFQFuT_zLxVgGJLxNeFUxHosQqXfVV0&dib_tag=se&keywords=garrafa%2Bstanley&qid=1724202163&s=kitchen&sprefix=garrafa%2Bstanl%2Ckitchen%2C193&sr=1-3&ufe=app_do%3Aamzn1.fos.6121c6c4-c969-43ae-92f7-cc248fc6181d&th=1&psc=1',
     imageUrl: 'garrafa_stanley.png',
     creditCard: 'https://mpago.la/2aGkZdL',
   },
   {
-    name: 'Robo Aspirador',
+    name: 'Panela de Pressão Elétrica',
     price: 'R$ 500,00',
     productLink:
-      'https://www.amazon.com.br/Aspirador-WAP-Bivolt-Autom%C3%A1tico-Inteligente/dp/B0849PHXW1/ref=asc_df_B0849PHXW1/?tag=googleshopp00-20&linkCode=df0&hvadid=379725476635&hvpos=&hvnetw=g&hvrand=7726647202389929218&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196585&hvtargid=pla-893461771420&psc=1&mcid=83f05d9f50b837ac878c82174d14f206',
-    imageUrl: 'aspirador.png',
+      'https://www.amazon.com.br/Electrolux-capacidade-silenciosa-antitermica-PCE15/dp/B0BZ8WKG61/ref=asc_df_B0BZ8WKG61/?tag=googleshopp00-20&linkCode=df0&hvadid=647436915040&hvpos=&hvnetw=g&hvrand=4805008718060727004&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196585&hvtargid=pla-2201507741736&mcid=af516713bd003757b78d8bfbd9b6dec6&th=1',
+    imageUrl: 'panela_eletrica.png',
     creditCard: 'https://mpago.la/132hiMX',
   },
   {
@@ -153,7 +162,7 @@ const items = [
     name: 'Jogo de Toalhas',
     price: 'R$ 180,00',
     productLink:
-      'https://www.firstclass.com.br/jogo-banhao-4-pecas-chronos-fio-penteado---403-off-white/p',
+      'https://www.casadatoalha.com.br/jogo-de-toalha-5-pecas-fio-penteado-100-algodao-branca',
     imageUrl: 'jogo_toalha.png',
     creditCard: 'https://mpago.la/2doTFUf',
   },
@@ -161,7 +170,7 @@ const items = [
     name: 'Máquina de Lavar',
     price: 'R$ 2000,00',
     productLink:
-      'https://www.magazineluiza.com.br/lavadora-de-roupas-brastemp-inverter-10kg-cesto-inox-15-programas-de-lavagem-titanium-bnf10as/p/237972400/ed/lava/?&force=4&seller_id=magazineluiza&utm_source=google&utm_medium=pla&utm_campaign=&partner_id=66993&gclsrc=aw.ds&gclid=CjwKCAjwhvi0BhA4EiwAX25uj5BFU8QTnxPtwO0ZHk7mYA1A3Il7kDwL-miXi3jkgAapRLkYzphbgRoCyfQQAvD_BwE',
+      'https://www.magazineluiza.com.br/lavadora-de-roupas-brastemp-inverter-10kg-cesto-inox-15-programas-de-lavagem-titanium-bnf10as/p/237972300/ed/lava/?&seller_id=magazineluiza&utm_source=google&utm_medium=cpc&utm_term=66992&utm_campaign=google_eco_per_ven_pla_ele_apo_1p_ed&utm_content=&partner_id=66992&gclsrc=aw.ds&gclid=CjwKCAjw_ZC2BhAQEiwAXSgClqbZC1Va4TZIq3_AlPYl3AATpQv_xW3ZDC9W3m6LrH7awpT_QJbwrRoCGNEQAvD_BwE',
     imageUrl: 'maquina_lavar.png',
     creditCard: 'https://mpago.la/1Vo4tiS',
   },
