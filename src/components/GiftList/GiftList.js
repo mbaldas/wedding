@@ -95,12 +95,12 @@ const items = [
     creditCard: 'https://mpago.la/1E9osgN',
   },
   {
-    name: 'Jogo de Potes Herméticos',
-    price: 'R$ 100,00',
+    name: 'Vaso de Plantas',
+    price: 'R$ 160,00',
     productLink:
-      'https://www.fastshop.com.br/web/p/d/EX41046086_PRD/jogo-de-potes-herm%C3%A9ticos-transparente-em-polipropileno-com-12-pe%C3%A7as---electrolux?utm_source=google&utm_medium=cpc&utm_term=pmax_1p&utm_campaign=20347956224&gad_source=1&gclid=CjwKCAjwhvi0BhA4EiwAX25uj_6TkpV0YaSNi1EzjIxCJHGVrR8zvjxC6NFeLOU_87es2M8Mo8Ob-BoCw2sQAvD_BwE',
-    imageUrl: 'jogo_pote.png',
-    creditCard: 'https://mpago.la/2gg5bZz',
+      'https://now.westwing.com.br/suporte-de-plantas-com-vaso-humaita-verde-oliva-138395.html?simple=DEQ24ENT71864-170589&gad_source=4&gclid=Cj0KCQjwz7C2BhDkARIsAA_SZKb3m0GOmkgQGdLtAxUuew6iSnpto3gR5VOjckDgaEYYhfmIe8siom0aAmw4EALw_wcB',
+    imageUrl: 'vaso_planta.png',
+    creditCard: 'https://mpago.la/2ewWrba',
   },
   {
     name: 'Caixa de Som JBL',
@@ -144,7 +144,7 @@ const items = [
   },
   {
     name: 'Panela de Pressão Elétrica',
-    price: 'R$ 500,00',
+    price: 'R$ 370,00',
     productLink:
       'https://www.amazon.com.br/Electrolux-capacidade-silenciosa-antitermica-PCE15/dp/B0BZ8WKG61/ref=asc_df_B0BZ8WKG61/?tag=googleshopp00-20&linkCode=df0&hvadid=647436915040&hvpos=&hvnetw=g&hvrand=4805008718060727004&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196585&hvtargid=pla-2201507741736&mcid=af516713bd003757b78d8bfbd9b6dec6&th=1',
     imageUrl: 'panela_eletrica.png',
