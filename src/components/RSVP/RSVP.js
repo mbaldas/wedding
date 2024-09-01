@@ -113,6 +113,17 @@ const people = [
   { id: 106, name: 'Washington Silva', related: [107] },
   { id: 107, name: 'Igor Silva', related: [106] },
   { id: 108, name: 'Thayna Lira', related: [] },
+  { id: 109, name: 'Daniella Rocha', related: [110, 111, 112, 113, 114, 115] },
+  { id: 110, name: 'Rodrigo Simões', related: [109, 111, 112, 113, 114, 115] },
+  { id: 111, name: 'Rafaella Rocha', related: [109, 110, 112, 113, 114, 115] },
+  { id: 112, name: 'Lourdes Cunha', related: [109, 110, 111, 113, 114, 115] },
+  {
+    id: 113,
+    name: 'Manoel Carlos Rocha',
+    related: [109, 110, 111, 112, 114, 115],
+  },
+  { id: 114, name: 'Manu', related: [109, 110, 111, 112, 113, 115] },
+  { id: 115, name: 'Lucca', related: [109, 110, 111, 112, 113, 114] },
 ];
 
 export default function RSVP() {
@@ -261,7 +272,7 @@ export default function RSVP() {
           </>
         )}
         <span className='block text-base md:text-lg mt-6 md:mt-8'>
-          Confirme até a data 1 de setembro.
+          Confirme até a data 7 de setembro.
         </span>
         <span className='block text-xs md:text-sm italic mt-1'>
           A não confirmação será considerada como ausência.
