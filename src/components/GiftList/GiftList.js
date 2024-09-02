@@ -30,12 +30,12 @@ const items = [
     creditCard: 'https://mpago.la/18Suh89',
   },
   {
-    name: 'Air Fryer Philips Walita',
-    price: 'R$ 400,00',
+    name: 'Panela Polishop',
+    price: 'R$ 485,00',
     productLink:
-      'https://www.amazon.com.br/dp/B0BRL9YHD7?tag=ft-tdc-95204-20&linkCode=ogi&th=1',
-    imageUrl: 'air_fryer.png',
-    creditCard: 'https://mpago.la/13e5EGF',
+      'https://www.polishop.com.br/panelas-polishop-family-24cm-saute-petit-20cm-ultra-azul-tampas-de-vidro/p',
+    imageUrl: 'panela_poli.png',
+    creditCard: 'https://mpago.la/1gYTGgR',
   },
   {
     name: 'Jogo de Talheres Tramontina',
@@ -199,12 +199,12 @@ const items = [
     creditCard: 'https://mpago.la/1nQ23Af',
   },
   {
-    name: 'Jogo de Panelas Cerâmica',
-    price: 'R$ 650,00',
+    name: 'Grill Frigideira',
+    price: 'R$ 170,00',
     productLink:
-      'https://www.amazon.com.br/Conjunto-Panelas-Ceramic-Orion-Brinox/dp/B086TXYHGC/ref=sr_1_16?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=21X9NDKSLULAY&dib=eyJ2IjoiMSJ9.cBXOm9-gemZXQVo-3_JVJjB6tH_ru5DKFbXcjtN_s8xm5yjmFBTZt0wsgQcVr2As6mLXwX8Ihrqf5NYL9C92fxLz2f4jQZo_rZCoRvXhRbCdRrD8cV6cpso1I4vmvn0Bh763awWrCJGpgEwXsn0TUATXvsqqsAND-TiykJ4k-JNC_Z2xjuOs-hdM7kG56ittCftaek7fRswgHnK7JFoAVwKmIioWqPBHrD3pvW6RzIpGFxqxXL2ZChy7IoO_lHWVoAF_2mMc0uHYeyQ03l-QFs&dib_tag=se&keywords=panelas+ceramica&qid=1721699903&sprefix=panelas+ceramic%2Caps%2C200&sr=8-16&ufe=app_do%3Aamzn1.fos.360726cb-54b8-4209-b7f3-b30f3f21a9db',
-    imageUrl: 'jogo_panelas.png',
-    creditCard: 'https://mpago.la/1TUw8ZG',
+      'https://www.brinoxshop.com.br/grill-28-cm-2-l-fogao-inducao-revestimento-ceramica-antiaderente-cor-preta-ceramic-life-orion-brinox_4813353/p',
+    imageUrl: 'frigideira.png',
+    creditCard: 'https://mpago.la/17fRLxo',
   },
 ];
 
