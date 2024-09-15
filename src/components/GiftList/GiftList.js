@@ -14,14 +14,6 @@ const roboto = Roboto_Slab({ subsets: ['latin'] });
 
 const items = [
   {
-    name: 'Roupa de Cama Queen',
-    price: 'R$ 180,00',
-    productLink:
-      'https://www.firstclass.com.br/jogo-de-cama--casual-blanc-queen---0001-branco/p?idsku=5007&gad_source=1&gclid=CjwKCAjw_ZC2BhAQEiwAXSgClp13iljjP6kyaygHgu9Qz3R5EjIO4VUWxfKxSJlKOcgDMdXf_fIH5BoChJYQAvD_BwE',
-    imageUrl: 'jogo_cama.png',
-    creditCard: 'https://mpago.la/2hHkNak',
-  },
-  {
     name: 'Conjunto Taças de Espumante',
     price: 'R$ 200,00',
     productLink:
@@ -130,7 +122,7 @@ const items = [
     name: 'Edredom',
     price: 'R$ 215,00',
     productLink:
-      'https://www.casadona.com.br/kit-edredom-italiano-3-pecas-200-fios-100-algodao-queen-240-x-220-metros-casa-dona?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&sku=50004997&gad_source=1&gclid=CjwKCAjwhvi0BhA4EiwAX25uj-U4kbkjfbSXAp6YWliOBE8ORkKO3xwZTn90esUz8QoKGE0htwd0UBoCB4oQAvD_BwE',
+      'https://www.ortobom.com.br/roupa-de-cama/edredom-microfibra-branco/4611?gad_source=1&gclid=Cj0KCQjwi5q3BhCiARIsAJCfuZmtJTYqQsp93z7v9_CzQBbrmg1GUFFUJoQe_nLUdvK6RD790oBwjCcaApoKEALw_wcB',
     imageUrl: 'edredom.png',
     creditCard: 'https://mpago.la/2dX8CN3',
   },

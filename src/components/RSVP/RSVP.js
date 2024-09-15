@@ -124,6 +124,8 @@ const people = [
   },
   { id: 114, name: 'Manu', related: [109, 110, 111, 112, 113, 115] },
   { id: 115, name: 'Lucca', related: [109, 110, 111, 112, 113, 114] },
+  { id: 116, name: 'Valeria', related: [117] },
+  { id: 117, name: 'Tony', related: [116] },
 ];
 
 export default function RSVP() {
